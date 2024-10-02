@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      position: relative;
+    }
+
+    .box {
+      height: 150px;
+      background: linear-gradient(rgb(10, 10, 186),rgb(83, 183, 223));
+      position: absolute;
+      border-radius: 20px;
+      width: 0; 
+    }
+
+    .box.left1 {
+      top: 0; 
+      left: 0;
+      animation: expandLeft 3s ease-in-out forwards;
+    }
+
+    .box.right1 {
+      top: 25%; 
+      right: 0;
+      animation: expandRight 3s ease-in-out forwards;
+    }
+
+    .box.left2 {
+      top: 50%; 
+      left: 0;
+      animation: expandLeft 3s ease-in-out forwards;
+    }
+
+    .box.right2 {
+      top: 75%; 
+      right: 0;
+      animation: expandRight 3s ease-in-out forwards;
+    }
+
+    @keyframes expandLeft {
+      0% {
+        left: 0;
+        width: 0;
+      }
+      100% {
+        left: 0;
+        width: 50vw;
+      }
+    }
+
+    @keyframes expandRight {
+      0% {
+        right: 0;
+        width: 0;
+      }
+      100% {
+        right: 0;
+        width: 50vw; 
+      }
+    }
+  </style>
+  <title>Expanding Boxes to 50%</title>
+</head>
+<body>
+  <div class="box left1">Box-1</div>
+  <div class="box right1">Box-2</div>
+  <div class="box left2">Box-3</div>
+  <div class="box right2">Box-4</div>
+</body>
+</html>
